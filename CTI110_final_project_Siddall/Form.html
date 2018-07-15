@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #F9CA4D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+	width: 500px;
+	margin-left: 350px;
+	border: 3px solid #DF9406; 
+}
+
+.col-25 {
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/* Footer settings */
+.footer {
+	float: right;
+	text-color: black;
+	font-size: 9pt;
+	margin-top: 70px;
+	margin-right: 45px;
+}
+
+/* Header text settings */
+.container1 {
+    position: relative;
+    text-align: center;
+    color: white;
+	text-shadow: 3px 2px red;
+	font-size: 50px;
+	font-family: "Courier New", Courier, monospace
+}
+
+/* Header text position */
+.centered {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+/* Background image */
+body {
+    background-image: url("background.png");
+}
+
+/* Footer settings */
+.footer {
+	float: right;
+	text-color: black;
+	font-size: 9pt;
+	margin-top: 70px;
+	margin-right: 45px;
+}
+
+/* Button/ shadow settings */
+.button1 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	background-color: #F9CA4D;
+	padding: 16px 42px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 0px 0px;
+    cursor: pointer;
+}
+
+/* Button box */
+.left{
+	float:left;
+	width: 175px;
+	 border: 3px solid #DF9406;
+    padding: 10px;
+}
+
+</style>
+</head>
+<header>
+<div class="container1">
+  <img src="C:\Users\Autumn\Desktop\Daddy School\CTI110_1901/Web site proposal/kitchen.png" alt="Kitchen" style="width:100%; height:150px;">
+  <div class="centered">Thai Cooking</div>
+</div>
+</header>
+<body>
+<nav>
+<div class="left"><div>
+	<a href="Main Page.html"><button class="Default Button button1">Main Page</button></a><br>
+</div></div>
+</nav>
+<div class="container">
+  <form action="/Comment_Page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Rating</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Completely Satisfied</option>
+          <option value="canada">Very Satisfied</option>
+          <option value="usa">Satisfied</option>
+		  <option value="usa">Neutral</option>
+		  <option value="usa">UnSatisfied</option>
+		  <option value="usa">Very UnSatisfied</option>
+		  <option value="usa">Completely UnSatisfied</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Your thoughts.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Send">
+    </div>
+  </form>
+</div>
+
+</body>
+<footer>
+<div class="footer"> Developed by: Steven Siddall<br><a href="mailto:siddalls3135@faytechcc.edu?subject=Email%20Subject">E-mail</a></div>
+</footer>
+</html>
